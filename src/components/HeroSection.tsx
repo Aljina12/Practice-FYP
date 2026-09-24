@@ -1,15 +1,36 @@
-const HeroSection = () => (
-    <header className="mb-10">
-        <p className="mb-3 text-sm uppercase tracking-[0.2em] text-cyan-300">
-            Stay somewhere unforgettable
-        </p>
-        <h1 className="max-w-3xl text-4xl font-bold tracking-tight sm:text-6xl">
-            Find your next favorite stay.
-        </h1>
-        <p className="mt-4 max-w-2xl text-lg text-gray-400">
-            Handpicked homes, cabins, and apartments for your next escape.
-        </p>
-    </header>
-)
+import heroImage from "../assets/img1.jpg";
 
-export default HeroSection
+const HeroSection = () => {
+    return (
+        <section className="relative overflow-hidden rounded-3xl border-[10px] border-[#252a46]">
+
+            <div
+                className="h-[400px] bg-cover bg-center md:h-[500px]"
+                style={{
+                    backgroundImage: `url(${heroImage})`,
+                }}
+            >
+                <div className="flex h-full items-center bg-black/10 px-8 md:px-16">
+
+                    <div className="max-w-md text-[#171b2a]">
+
+                        <h1 className="text-4xl font-bold leading-tight md:text-6xl">
+                            Peace, nature,
+                            <br />
+                            dream
+                        </h1>
+
+                        <p className="mt-4 text-lg">
+                            Find and book a great experience.
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+    );
+};
+
+export default HeroSection;
