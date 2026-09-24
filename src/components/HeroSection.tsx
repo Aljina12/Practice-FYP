@@ -1,11 +1,11 @@
-import heroImage from "../assets/img1.jpg";
+import heroImage from "../assets/hero.png";
 
 const HeroSection = () => {
     return (
-        <section className="relative overflow-hidden rounded-3xl border-[10px] border-[#252a46]">
+        <section className="relative overflow-hidden rounded-3xl border-10 border-[#252a46]">
 
             <div
-                className="h-[400px] bg-cover bg-center md:h-[500px]"
+                className="h-100 bg-cover bg-center md:h-125"
                 style={{
                     backgroundImage: `url(${heroImage})`,
                 }}

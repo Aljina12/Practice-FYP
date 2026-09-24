@@ -1,15 +1,49 @@
+import img1 from '../assets/img 1.png'
+import img2 from '../assets/img 2.png'
+
 export type Property = {
     id: number
     name: string
-    country: string
-    type: 'Cabin' | 'Apartment' | 'Villa'
-    rating: number
+    location: string
+    description: string
+    image: string
     price: number
+    rating: number
+    bedrooms: number
+    guests: number
     superhost: boolean
+    country: string
+    type: string
 }
 
 export const properties: Property[] = [
-    { id: 1, name: 'Forest Glass Cabin', country: 'Japan', type: 'Cabin', rating: 4.9, price: 210, superhost: true },
-    { id: 2, name: 'Sunlit Lisbon Loft', country: 'Portugal', type: 'Apartment', rating: 4.8, price: 145, superhost: false },
-    { id: 3, name: 'Tuscan Hill Villa', country: 'Italy', type: 'Villa', rating: 5, price: 290, superhost: true },
+    {
+        id: 1,
+        name: 'Nordic Retreat with Sauna',
+        location: 'Sweden',
+        description: 'Enjoy a peaceful stay in a beautiful Nordic cabin.',
+        image: img1,
+        price: 250,
+        rating: 4.9,
+        bedrooms: 2,
+        guests: 3,
+        superhost: true,
+        country: 'Sweden',
+        type: 'Cabin',
+    },
+
+    {
+        id: 2,
+        name: 'Cabin with Private Sauna',
+        location: 'Finland',
+        description: 'Relax in a beautiful cabin surrounded by nature.',
+        image: img2,
+        price: 170,
+        rating: 4.9,
+        bedrooms: 2,
+        guests: 4,
+        superhost: true,
+        country: 'Finland',
+        type: 'Cabin',
+    },
 ]
