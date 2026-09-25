@@ -3,8 +3,8 @@ import { useState } from "react";
 import HeroSection from "../components/HeroSection";
 import FilterBar from "../components/FilterBar";
 import PropertyCard from "../components/PropertyCard";
-import { properties } from "../data/properties";
 
+import { properties } from "../data/properties";
 
 const HomePage = () => {
     const [country, setCountry] = useState("All Stays");
@@ -16,23 +16,30 @@ const HomePage = () => {
     // Filter properties
     const filteredProperties = properties.filter((property) => {
         const matchesCountry =
-            country === "All Stays" || property.country === country;
+            country === "All Stays" ||
+            property.country === country;
 
         const matchesSuperhost =
-            !superhostOnly || property.superhost;
+            !superhostOnly ||
+            property.superhost === true;
 
-        const matchesType =
-            propertyType === "All" || property.type === propertyType;
+        const matchesPropertyType =
+            propertyType === "All" ||
+            property.type === propertyType;
 
-        return matchesCountry && matchesSuperhost && matchesType;
+        return (
+            matchesCountry &&
+            matchesSuperhost &&
+            matchesPropertyType
+        );
     });
 
     return (
         <main className="min-h-screen bg-[#080b20] text-white">
 
-            <div className="mx-auto max-w-362.5 px-5 py-10">
+            <div className="mx-auto max-w-[1450px] px-4 py-6 md:px-6 md:py-10">
 
-                {/* Hero Section */}
+                {/* Hero */}
                 <HeroSection />
 
                 {/* Filters */}
@@ -45,22 +52,23 @@ const HomePage = () => {
                     setPropertyType={setPropertyType}
                 />
 
-                {/* Property Listing */}
-                <section className="mt-8">
+                {/* Properties */}
+                <section className="mt-9">
 
+                    {/* Heading */}
                     <div className="mb-6 flex items-center justify-between">
 
-                        <h2 className="text-xl font-semibold">
+                        <h2 className="text-lg font-semibold md:text-xl">
                             Over 200 stays
                         </h2>
 
-                        <span className="text-sm text-gray-400">
+                        <span className="text-xs text-gray-500 md:text-sm">
                             {filteredProperties.length} properties
                         </span>
 
                     </div>
 
-                    {/* Property Grid */}
+                    {/* Cards */}
                     {filteredProperties.length > 0 ? (
 
                         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -76,14 +84,19 @@ const HomePage = () => {
 
                     ) : (
 
-                        <div className="py-16 text-center">
+                        /* Empty State */
+                        <div className="rounded-xl border border-[#303b4f] bg-[#111a2a] py-16 text-center">
 
-                            <h3 className="text-xl font-semibold">
+                            <div className="text-4xl">
+                                🏠
+                            </div>
+
+                            <h3 className="mt-4 text-lg font-semibold">
                                 No properties found
                             </h3>
 
-                            <p className="mt-2 text-gray-400">
-                                Try changing your filters to see more stays.
+                            <p className="mt-2 text-sm text-gray-400">
+                                Try changing your filters.
                             </p>
 
                         </div>
