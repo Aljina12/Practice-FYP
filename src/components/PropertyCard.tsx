@@ -1,30 +1,88 @@
-import type { Property } from '../data/properties'
+import type { Property } from "../types/property";
 
-type PropertyCardProps = {
-    property: Property
+interface PropertyCardProps {
+    property: Property;
 }
 
-const PropertyCard = ({ property }: PropertyCardProps) => (
-    <article className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-        <div className="flex h-40 items-end bg-linear-to-br from-cyan-500/50 via-blue-500/30 to-fuchsia-500/40 p-4">
-            <span className="rounded-full bg-black/30 px-3 py-1 text-xs backdrop-blur">
-                {property.type}
-            </span>
-        </div>
-        <div className="p-5">
-            <div className="flex items-start justify-between gap-3">
-                <div>
-                    <h3 className="font-semibold">{property.name}</h3>
-                    <p className="mt-1 text-sm text-gray-400">{property.country}</p>
-                </div>
-                <span className="text-sm text-cyan-300">{property.rating} / 5</span>
-            </div>
-            <p className="mt-4 text-sm text-gray-300">${property.price} night</p>
-            {property.superhost && (
-                <p className="mt-2 text-xs text-amber-300">SUPERHOST</p>
-            )}
-        </div>
-    </article>
-)
+const PropertyCard = ({ property }: PropertyCardProps) => {
+    return (
+        <article className="group overflow-hidden rounded-xl border border-[#303b4f] bg-[#111a2a] transition-all duration-300 hover:-translate-y-1 hover:border-[#58647a] hover:shadow-xl">
 
-export default PropertyCard
+            {/* Image */}
+            <div className="relative h-[205px] overflow-hidden">
+
+                <img
+                    src={property.image}
+                    alt={property.name}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+
+                {/* Superhost Badge */}
+                {property.superhost && (
+                    <div className="absolute left-3 top-3 rounded-md bg-[#182236]/95 px-2.5 py-1 text-[11px] font-medium text-white backdrop-blur-sm">
+                        Superhost ⭐
+                    </div>
+                )}
+
+            </div>
+
+            {/* Content */}
+            <div className="p-4">
+
+                {/* Title */}
+                <h3 className="line-clamp-1 text-[15px] font-semibold text-white">
+                    {property.name}
+                </h3>
+
+                {/* Description */}
+                <p className="mt-2 min-h-[58px] text-xs leading-5 text-gray-400">
+                    {property.description}
+                </p>
+
+                {/* Information */}
+                <div className="mt-3 flex items-center gap-4 text-[11px] text-gray-400">
+
+                    <span>
+                        🛏 {property.bedrooms} bedroom
+                    </span>
+
+                    <span>
+                        👤 {property.guests} guests
+                    </span>
+
+                </div>
+
+                {/* Divider */}
+                <div className="my-4 border-t border-[#303b4f]" />
+
+                {/* Bottom */}
+                <div className="flex items-center justify-between">
+
+                    <div>
+                        <span className="text-base font-semibold text-white">
+                            ${property.price}
+                        </span>
+
+                        <span className="ml-1 text-[11px] text-gray-400">
+                            /night
+                        </span>
+                    </div>
+
+                    <div className="flex items-center gap-1 text-sm">
+                        <span className="text-yellow-400">
+                            ★
+                        </span>
+
+                        <span className="text-gray-200">
+                            {property.rating}
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+        </article>
+    );
+};
+
+export default PropertyCard;
