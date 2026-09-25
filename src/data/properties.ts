@@ -1,14 +1,174 @@
-export interface Property {
-    id: number;
-    name: string;
-    location: string;
-    description: string;
-    image: string;
-    price: number;
-    rating: number;
-    bedrooms: number;
-    guests: number;
-    superhost: boolean;
-    country: string;
-    type: string;
-}
+import type { Property } from "../types/property";
+
+import img1 from "../assets/img1.jpg";
+import img2 from "../assets/img2.jpg";
+import img3 from "../assets/img3.jpg";
+import img4 from "../assets/img4.jpg";
+import img5 from "../assets/img5.jpg";
+import img6 from "../assets/img6.jpg";
+import img7 from "../assets/img7.jpg";
+import img8 from "../assets/img8.jpg";
+import img9 from "../assets/img9.jpg";
+import img10 from "../assets/img10.jpg";
+
+export const properties: Property[] = [
+    {
+        id: 1,
+        name: "Nordic Retreat with Stunning Views",
+        location: "Norway",
+        description:
+            "Immerse yourself in the beauty of the Nordic landscape at this sleek and stylish cabin. Enjoy breathtaking views and peaceful surroundings.",
+        image: img1,
+        price: 250,
+        rating: 4.9,
+        bedrooms: 2,
+        guests: 3,
+        superhost: true,
+        country: "Norway",
+        type: "Cabin",
+    },
+
+    {
+        id: 2,
+        name: "Cabin with Private Sauna",
+        location: "Finland",
+        description:
+            "Get away from it all at this secluded cabin tucked away in the heart of the Nordic wilderness. Relax and enjoy the peaceful surroundings.",
+        image: img2,
+        price: 170,
+        rating: 4.9,
+        bedrooms: 2,
+        guests: 4,
+        superhost: true,
+        country: "Finland",
+        type: "Cabin",
+    },
+
+    {
+        id: 3,
+        name: "Cozy Cabin in the Woods",
+        location: "Sweden",
+        description:
+            "Escape to this charming cabin nestled in the heart of the Nordic wilderness. Enjoy beautiful nature and a peaceful atmosphere.",
+        image: img3,
+        price: 180,
+        rating: 4.7,
+        bedrooms: 2,
+        guests: 3,
+        superhost: false,
+        country: "Sweden",
+        type: "Cabin",
+    },
+
+    {
+        id: 4,
+        name: "Charming Cabin with Lake Access",
+        location: "Norway",
+        description:
+            "Enjoy the best of both worlds with this charming Nordic cabin located just steps from a beautiful lake.",
+        image: img4,
+        price: 150,
+        rating: 4.9,
+        bedrooms: 1,
+        guests: 2,
+        superhost: true,
+        country: "Norway",
+        type: "Cabin",
+    },
+
+    {
+        id: 5,
+        name: "Log Cabin with Fireplace",
+        location: "Finland",
+        description:
+            "Experience the charm of a traditional Nordic log cabin with modern amenities and beautiful natural surroundings.",
+        image: img5,
+        price: 99,
+        rating: 4.9,
+        bedrooms: 1,
+        guests: 2,
+        superhost: false,
+        country: "Finland",
+        type: "Cabin",
+    },
+
+    {
+        id: 6,
+        name: "Cabin with Mountain Views",
+        location: "Switzerland",
+        description:
+            "Soak in the stunning mountain views from this comfortable Nordic cabin. Perfect for a relaxing getaway.",
+        image: img6,
+        price: 225,
+        rating: 4.8,
+        bedrooms: 2,
+        guests: 5,
+        superhost: true,
+        country: "Switzerland",
+        type: "Cabin",
+    },
+
+    {
+        id: 7,
+        name: "Modern Nordic House",
+        location: "Sweden",
+        description:
+            "A modern Nordic-style house surrounded by beautiful forests and peaceful landscapes.",
+        image: img7,
+        price: 210,
+        rating: 4.8,
+        bedrooms: 3,
+        guests: 5,
+        superhost: true,
+        country: "Sweden",
+        type: "House",
+    },
+
+    {
+        id: 8,
+        name: "Peaceful Mountain Cabin",
+        location: "Norway",
+        description:
+            "Stay in a peaceful mountain cabin surrounded by incredible landscapes and fresh Nordic air.",
+        image: img8,
+        price: 195,
+        rating: 4.7,
+        bedrooms: 2,
+        guests: 4,
+        superhost: false,
+        country: "Norway",
+        type: "Cabin",
+    },
+
+    {
+        id: 9,
+        name: "Traditional Nordic Home",
+        location: "Finland",
+        description:
+            "A traditional Nordic home with a cozy interior, beautiful views and everything you need for a comfortable stay.",
+        image: img9,
+        price: 160,
+        rating: 4.8,
+        bedrooms: 2,
+        guests: 4,
+        superhost: true,
+        country: "Finland",
+        type: "House",
+    },
+
+    {
+        id: 10,
+        name: "Luxury Mountain Retreat",
+        location: "Switzerland",
+        description:
+            "Relax in this beautiful mountain retreat with stunning views, modern facilities and a peaceful atmosphere.",
+        image: img10,
+        price: 300,
+        rating: 5.0,
+        bedrooms: 3,
+        guests: 6,
+        superhost: true,
+        country: "Switzerland",
+        type: "Villa",
+    },
+];
