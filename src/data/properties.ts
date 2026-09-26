@@ -1,15 +1,15 @@
 import type { Property } from "../types/property";
 
-import img1 from "../assets/img1.jpg";
-import img2 from "../assets/img2.jpg";
-import img3 from "../assets/img3.jpg";
-import img4 from "../assets/img4.jpg";
-import img5 from "../assets/img5.jpg";
-import img6 from "../assets/img6.jpg";
-import img7 from "../assets/img7.jpg";
-import img8 from "../assets/img8.jpg";
-import img9 from "../assets/img9.jpg";
-import img10 from "../assets/img10.jpg";
+import img1 from "../assets/img 1.png";
+import img2 from "../assets/img 2.png";
+import img3 from "../assets/img 3.png";
+import img4 from "../assets/img 4.png";
+import img5 from "../assets/img 5.png";
+import img6 from "../assets/img 6.png";
+import img7 from "../assets/img 7.png";
+import img8 from "../assets/img 8.png";
+import img9 from "../assets/img 9.png";
+import img10 from "../assets/img 10.png";
 
 export const properties: Property[] = [
   {
