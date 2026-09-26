@@ -88,7 +88,6 @@ const HomePage = () => {
                         <div className="rounded-xl border border-[#303b4f] bg-[#111a2a] py-16 text-center">
 
                             <div className="text-4xl">
-                                🏠
                             </div>
 
                             <h3 className="mt-4 text-lg font-semibold">
