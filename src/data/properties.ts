@@ -1,6 +1,4 @@
 import type { Property } from "../types/property";
-
-import img1 from "../assets/img 1.png";
 import img2 from "../assets/img 2.png";
 import img3 from "../assets/img 3.png";
 import img4 from "../assets/img 4.png";
@@ -12,21 +10,6 @@ import img9 from "../assets/img 9.png";
 import img10 from "../assets/img 10.png";
 
 export const properties: Property[] = [
-  {
-    id: 1,
-    name: "Nordic Retreat with Sauna",
-    location: "Norway",
-    description:
-      "Immerse yourself in the beauty of the Nordic landscape at this sleek and stylish cabin.",
-    image: img1,
-    price: 250,
-    rating: 4.9,
-    bedrooms: 2,
-    guests: 3,
-    superhost: true,
-    country: "Norway",
-    type: "Cabin",
-  },
 
   {
     id: 2,
