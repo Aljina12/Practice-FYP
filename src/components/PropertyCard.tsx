@@ -5,9 +5,9 @@ type PropertyCardProps = {
 }
 
 const PropertyCard = ({ property }: PropertyCardProps) => (
-    <article className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+    <article className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:shadow-xl hover:shadow-cyan-950/30">
         <div
-            className="relative flex h-40 items-end bg-cover bg-center p-4"
+            className="relative flex h-40 items-end bg-cover bg-center p-4 transition-transform duration-500 group-hover:scale-[1.03]"
             style={{ backgroundImage: `url(${property.image})` }}
         >
             <span className="rounded-full bg-black/30 px-3 py-1 text-xs backdrop-blur">

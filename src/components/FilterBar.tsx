@@ -26,7 +26,7 @@ const FilterBar = ({
     ];
 
     return (
-        <section className="relative z-20 mx-auto -mt-8 w-[94%] rounded-xl border border-[#3a455d] bg-[#20283b] p-3 shadow-2xl md:p-4">
+        <section className="relative z-20 mx-auto -mt-8 w-[94%] rounded-xl border border-[#3a455d] bg-[#20283b] p-3 shadow-2xl transition duration-300 hover:border-[#61718f] hover:shadow-[0_24px_60px_-28px_rgba(80,115,170,0.6)] md:p-4">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
 
                 {/* Country Buttons */}
@@ -36,8 +36,8 @@ const FilterBar = ({
                             key={item}
                             onClick={() => setCountry(item)}
                             className={`rounded-md px-3 py-2 text-xs transition-all md:text-sm ${country === item
-                                    ? "bg-[#4a566e] text-white"
-                                    : "text-gray-300 hover:bg-[#343e54]"
+                                ? "bg-[#4a566e] text-white"
+                                : "text-gray-300 transition-transform hover:-translate-y-px hover:bg-[#343e54]"
                                 }`}
                         >
                             {item}
@@ -53,7 +53,7 @@ const FilterBar = ({
                         <button
                             type="button"
                             onClick={() => setSuperhostOnly(!superhostOnly)}
-                            className={`relative h-6 w-11 rounded-full transition-colors ${superhostOnly ? "bg-blue-500" : "bg-[#586277]"
+                            className={`relative h-6 w-11 rounded-full transition duration-200 hover:scale-105 hover:brightness-110 ${superhostOnly ? "bg-blue-500" : "bg-[#586277]"
                                 }`}
                         >
                             <span
@@ -71,7 +71,7 @@ const FilterBar = ({
                     <select
                         value={propertyType}
                         onChange={(e) => setPropertyType(e.target.value)}
-                        className="rounded-lg border border-[#4a556d] bg-[#20283b] px-3 py-2 text-xs text-white outline-none md:text-sm"
+                        className="rounded-lg border border-[#4a556d] bg-[#20283b] px-3 py-2 text-xs text-white outline-none transition-colors hover:border-[#8193b5] focus:border-cyan-400 md:text-sm"
                     >
                         <option value="All">Property type</option>
                         <option value="Cabin">Cabin</option>

@@ -2,10 +2,10 @@ import heroImage from "../assets/img 1.png";
 
 const HeroSection = () => {
     return (
-        <section className="relative overflow-hidden rounded-3xl border-10 border-[#252a46]">
+        <section className="group relative overflow-hidden rounded-3xl border-10 border-[#252a46] transition-colors duration-300 hover:border-[#3d4668]">
 
             <div
-                className="h-100 bg-cover bg-center md:h-125"
+                className="h-100 bg-cover bg-center transition-transform duration-700 group-hover:scale-[1.02] md:h-125"
                 style={{
                     backgroundImage: `url(${heroImage})`,
                 }}
