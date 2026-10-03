@@ -12,5 +12,11 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
 
 <div
     className="h-40 bg-cover bg-center p-4"
-
-></div>
+    style={{
+        backgroundImage: `url(${property.image})`
+    }}
+>
+    <span className="rounded-full bg-white px-3 py-1 text-xs">
+        {property.type}
+    </span>
+</div>
