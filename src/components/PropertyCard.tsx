@@ -22,4 +22,7 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
     <h3 className="font-semibold">
         {property.name}
     </h3>
+    <p className="text-sm text-gray-500">
+        {property.country}
+    </p>
 </div>
