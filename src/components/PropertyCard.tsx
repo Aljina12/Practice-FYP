@@ -6,5 +6,11 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
     return (
         <article>
         </article>
+
     );
 };
+
+<div
+    className="h-40 bg-cover bg-center p-4"
+
+></div>
