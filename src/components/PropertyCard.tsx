@@ -19,4 +19,7 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
     <span className="rounded-full bg-white px-3 py-1 text-xs">
         {property.type}
     </span>
+    <h3 className="font-semibold">
+        {property.name}
+    </h3>
 </div>
