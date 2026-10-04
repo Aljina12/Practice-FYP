@@ -13,8 +13,30 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
                 className="h-40 bg-cover bg-center p-4"
                 style={{ backgroundImage: `url(${property.image})` }}
             >
+                <span className="rounded-full bg-white px-3 py-1 text-xs">
+                    {property.type}
+                </span>
+            </div>
 
-                );
+            {/* Property Details */}
+            <div className="p-5">
+
+                {/* Name and Rating */}
+                <div className="flex justify-between">
+                    <div>
+                        <h3 className="font-semibold">
+                            {property.name}
+                        </h3>
+
+                        <p className="text-sm text-gray-500">
+                            {property.country}
+                        </p>
+                    </div>
+
+
+                </div>
+        </article>
+    );
 };
 
-                export default PropertyCard;
+export default PropertyCard;
