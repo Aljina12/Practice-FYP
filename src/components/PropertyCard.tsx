@@ -33,8 +33,24 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
                         </p>
                     </div>
 
-
+                    <span className="text-sm text-green-700">
+                        {property.rating} / 5
+                    </span>
                 </div>
+
+                {/* Price */}
+                <p className="mt-4 text-sm">
+                    ${property.price} night
+                </p>
+
+                {/* Superhost */}
+                {property.superhost && (
+                    <p className="mt-2 text-xs text-orange-600">
+                        SUPERHOST
+                    </p>
+                )}
+
+            </div>
         </article>
     );
 };
