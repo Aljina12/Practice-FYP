@@ -13,6 +13,12 @@ const HeroSection = () => {
                 {/* Overlay */}
                 <div className="flex h-full items-center bg-gradient-to-r from-[#f6faf2]/90 via-[#f6faf2]/55 to-transparent px-8 md:px-16">
                 </div>
+
+                <h1 className="text-4xl font-bold md:text-6xl">
+                    Peace, nature,
+                    <br />
+                    dream
+                </h1>
             </div>
         </section>
     );
