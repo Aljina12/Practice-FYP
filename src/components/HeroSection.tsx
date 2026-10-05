@@ -12,18 +12,27 @@ const HeroSection = () => {
 
                 {/* Overlay */}
                 <div className="flex h-full items-center bg-gradient-to-r from-[#f6faf2]/90 via-[#f6faf2]/55 to-transparent px-8 md:px-16">
+
+                    {/* Hero Content */}
+                    <div className="max-w-md text-[#263b34]">
+
+                        {/* Title */}
+                        <h1 className="text-4xl font-bold md:text-6xl">
+                            Peace, nature,
+                            <br />
+                            dream
+                        </h1>
+
+                        {/* Description */}
+                        <p className="mt-4 text-lg">
+                            Find and book a great experience.
+                        </p>
+
+                    </div>
                 </div>
-
-                <h1 className="text-4xl font-bold md:text-6xl">
-                    Peace, nature,
-                    <br />
-                    dream
-                </h1>
-
-                <p className="mt-4 text-lg">
-                    Find and book a great experience.
-                </p>
             </div>
         </section>
     );
-}
+};
+
+export default HeroSection;
