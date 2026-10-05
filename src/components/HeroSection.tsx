@@ -19,6 +19,10 @@ const HeroSection = () => {
                     <br />
                     dream
                 </h1>
+
+                <p className="mt-4 text-lg">
+                    Find and book a great experience.
+                </p>
             </div>
         </section>
     );
